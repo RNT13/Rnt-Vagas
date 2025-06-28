@@ -1,7 +1,7 @@
 'use client'
 
 import { theme } from '@/styles/theme'
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 
 export const JobsContainer = styled.main`
   display: flex;

@@ -1,7 +1,8 @@
 'use client'
 
 import { theme } from '@/styles/theme'
-import { styled } from 'styled-components'
+import Link from 'next/link'
+import styled from 'styled-components'
 
 export const FooterContainer = styled.footer`
   background-color: ${theme.colors.black};
@@ -32,7 +33,7 @@ export const SocialLinks = styled.div`
   gap: 10px;
 `
 
-export const SocialLinksItens = styled.a`
+export const SocialLinksItens = styled(Link)`
   transition: color 0.3s;
   cursor: pointer;
 

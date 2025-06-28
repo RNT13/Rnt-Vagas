@@ -1,6 +1,8 @@
+'use client'
+
 import { RegisterItemContainer, RegisterItemContent } from "./RegisterItemStyles";
 
-export default function RegisterItem({ childrem, name, description }: { childrem: React.ReactNode, name: string, description: string }) {
+export default function RegisterItem({ children, name, description }: { children: React.ReactNode, name: string, description: string }) {
   return (
     <RegisterItemContainer className="container">
       <RegisterItemContent>
@@ -9,7 +11,7 @@ export default function RegisterItem({ childrem, name, description }: { childrem
           {description}
         </h3>
       </RegisterItemContent>
-      {childrem}
+      {children}
     </RegisterItemContainer>
   )
 }

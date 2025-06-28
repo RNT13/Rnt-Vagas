@@ -11,7 +11,7 @@ export default function Navbar() {
         <NavbarItem href="/">Home</NavbarItem>
         <NavbarItem href="/about">Sobre</NavbarItem>
         <NavbarItem href="/jobs">Vagas</NavbarItem>
-        <NavbarItem href="/jobs/register">Cadastrar Vagas</NavbarItem>
+        <NavbarItem href="/jobs/register">Cadastrar vagas</NavbarItem>
       </NavbarContent>
     </NavbarContainer>
   )

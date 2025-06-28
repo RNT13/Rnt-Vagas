@@ -1,6 +1,7 @@
 'use client'
 
 import { theme } from '@/styles/theme'
+import Link from 'next/link'
 import styled from 'styled-components'
 
 export const ButtonContainer = styled.div``
@@ -24,6 +25,6 @@ export const StyledButton = styled.button`
   ${BaseButton}
 `
 
-export const StyledLink = styled.a`
+export const StyledLink = styled(Link)`
   ${BaseButton}
 `

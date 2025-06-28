@@ -1,13 +1,15 @@
 'use client'
 
-import { styled } from 'styled-components'
+import { theme } from '@/styles/theme'
+import styled from 'styled-components'
 
 export const JobsRegisterContainer = styled.main``
 
 export const JobsRegisterContent = styled.div`
-  width: 100%;
-  height: 100%;
   padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 export const JobsRegisterForm = styled.form``
@@ -24,4 +26,23 @@ export const FormTextArea = styled.textarea`
   height: 100px;
   margin: 12px 0;
   resize: none;
+`
+
+export const ButtonDiv = styled.div`
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  button {
+    width: 200px;
+    background-color: ${theme.colors.thirdColor};
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: ${theme.colors.forthColor};
+      color: ${theme.colors.primaryColor};
+      transition: all 0.3s ease;
+    }
+  }
 `

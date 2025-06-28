@@ -8,7 +8,7 @@ export default function About() {
     <AboutContainer >
       <AboutContent className="container">
         <AboutDescriptions>
-          <AboutTitle>Tudo o que vc precisa <br /><span>Você encontrar aqui</span>!</AboutTitle>
+          <AboutTitle>Tudo o que você precisa <br /><span>você encontra aqui</span>!</AboutTitle>
           <AboutText>
             <p>O RntVagas é a solução ideal para profissionais de diferentes áreas que buscam novas oportunidades e para empresas que procuram talentos qualificados.</p>
 

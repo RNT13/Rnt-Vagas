@@ -1,15 +1,17 @@
 'use client'
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { ColumnDiv, FooterContainer, FooterContent, FooterCopy, FooterText, RowDiv, SocialLinks, SocialLinksItens } from "./FooterStyles";
 
-const getCurrentYear = () => {
-  const date = new Date()
-  return date.getFullYear()
-}
-
 export default function Footer() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <FooterContainer >
       <FooterContent className="container">
@@ -31,10 +33,11 @@ export default function Footer() {
           <FooterText>
             RNT Vagas conecta candidatos a empresas ideais, oferecendo funcionalidades intuitivas para busca e gerenciamento de vagas.
           </FooterText>
-          <FooterCopy>&copy; {getCurrentYear()} RNT Projects. All rights reserved.</FooterCopy>
+          <FooterCopy>
+            &copy; {year ?? ""} RNT Projects. All rights reserved.
+          </FooterCopy>
         </ColumnDiv>
       </FooterContent>
     </FooterContainer>
-
   )
 }

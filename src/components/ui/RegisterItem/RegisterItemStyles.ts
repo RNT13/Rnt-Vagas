@@ -1,15 +1,17 @@
+'use client'
+
 import { theme } from '@/styles/theme'
-import { styled } from 'styled-components'
+import styled from 'styled-components'
 
 export const RegisterItemContainer = styled.div`
   padding: 12px;
   display: flex;
   justify-content: space-between;
   background-color: ${theme.colors.thirdColor};
-  border-bottom: 2px solid ${theme.colors.primaryColor};
+  border-bottom: 5px solid ${theme.colors.primaryColor};
 
   &:hover {
-    border-bottom: 2px solid ${theme.colors.forthColor};
+    border-bottom: 5px solid ${theme.colors.forthColor};
   }
 `
 
