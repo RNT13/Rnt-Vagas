@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from "@/components/ui/Button/Button";
 import { GlobalP, TitleH2 } from "@/styles/globalStyles";
 import Image from "next/image";

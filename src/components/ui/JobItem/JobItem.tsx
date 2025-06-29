@@ -1,15 +1,8 @@
 'use client'
 
 import { Button } from "@/components/ui/Button/Button";
+import { Job } from "@/types/types";
 import { JobItemContainer, JobItemContent } from "./JobItemStyles";
-
-type Job = {
-  id: string,
-  title: string,
-  company: string,
-  city: string,
-  salary: string
-}
 
 interface jobItemProps {
   job: Job
@@ -23,7 +16,7 @@ export default function JobItem({ job }: jobItemProps) {
         <h4>{job.company}</h4>
         <h4>{job.city}</h4>
         <h4>{job.salary}</h4>
-        <Button title="Ver vaga" />
+        <Button href={`/jobs/${job.id}`} title="Ver vaga" />
       </JobItemContent>
     </JobItemContainer>
   )

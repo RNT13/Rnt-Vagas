@@ -1,29 +1,35 @@
-'use client'
-
 import JobItem from "@/components/ui/JobItem/JobItem";
 import { TitleH2 } from "@/styles/globalStyles";
+import { Job } from "@/types/types";
 import { JobsContainer, JobsContent } from "./jobs.styles";
 
-const job = {
-  id: "1",
-  title: "Desenvolvedor Front-end",
-  company: "Google",
-  city: "São Paulo",
-  salary: "R$ 10.000,00"
+export const dynamic = 'force-dynamic'
+
+async function fetchJobs() {
+  const res = await fetch('http://apis.codante.io/api/job-board/jobs')
+
+  if (!res.ok) {
+    throw new Error('Ops... Algo deu errado')
+  }
+
+  const json = await res.json()
+  const jobs: Job[] = json.data
+  return jobs
 }
 
-export default function Jobs() {
+export default async function Jobs() {
+  const jobs = await fetchJobs()
+
   return (
     <JobsContainer className="container">
       <JobsContent >
         <TitleH2>Todas as vagas</TitleH2>
         <div>
-          <JobItem job={job} />
-          <JobItem job={job} />
-          <JobItem job={job} />
-          <JobItem job={job} />
-          <JobItem job={job} />
+          {jobs.map(job => (
+            <JobItem key={job.id} job={job} />
+          ))}
         </div>
+
       </JobsContent>
     </JobsContainer>
   )

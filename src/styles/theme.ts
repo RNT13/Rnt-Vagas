@@ -27,6 +27,7 @@ export const theme = {
     orange2: '#ff7f50',
     black: '#000',
     red: '#FF0000',
+    redHover: '#FF4837',
     green: '#008000',
     green2: '#44BD32'
   }
