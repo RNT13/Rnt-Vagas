@@ -10,7 +10,7 @@ export async function deleteJob(formData: FormData) {
   redirect('/jobs')
 }
 
-export async function createJob(_state: any, formData: FormData) {
+export async function createJob(_state: unknown, formData: FormData) {
   const rawData = Object.fromEntries(formData)
 
   const payload = {
