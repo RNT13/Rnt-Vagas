@@ -18,7 +18,7 @@ export default function JobCard({ job }: JobCardProps) {
 
   return (
     <JobCardContainer className="container">
-      <div className="backButton">
+      <div className="backButtonDiv">
         <Button href="/jobs" title={"Todas as vagas"} type="button">
           <FaArrowLeft />
         </Button>

@@ -1,12 +1,16 @@
 'use client'
 
-import { theme } from '@/styles/theme'
+import { media, theme, transitions } from '@/styles/theme'
 import styled from 'styled-components'
 
 export const JobsRegisterContainer = styled.main`
   display: flex;
   flex-direction: column;
   padding: 24px;
+
+  ${media.sm} {
+    padding: 0px;
+  }
 `
 
 export const JobsRegisterContent = styled.div`
@@ -78,12 +82,12 @@ export const ButtonDiv = styled.div`
   button {
     width: 200px;
     background-color: ${theme.colors.thirdColor};
-    transition: all 0.3s ease;
+    transition: ${transitions.default};
 
     &:hover {
       background-color: ${theme.colors.forthColor};
       color: ${theme.colors.primaryColor};
-      transition: all 0.3s ease;
+      transition: ${transitions.default};
     }
   }
 `

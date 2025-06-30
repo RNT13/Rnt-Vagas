@@ -1,16 +1,14 @@
+export const media = {
+  sm: '@media (max-width: 480px)',
+  md: '@media (max-width: 768px)',
+  lg: '@media (max-width: 1024px)'
+}
+
+export const transitions = {
+  default: 'all 0.3s ease'
+}
+
 export const theme = {
-  breakpoints: {
-    sm: '480px',
-    md: '768px',
-    lg: '1024px',
-    xl: '1200px'
-  },
-  media: {
-    sm: `(max-width: 480px)`,
-    md: `(max-width: 768px)`,
-    lg: `(max-width: 1024px)`,
-    xl: `(max-width: 1200px)`
-  },
   colors: {
     primaryColor: '#011627',
     secondaryColor: '#023864',

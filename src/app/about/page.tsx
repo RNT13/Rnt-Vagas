@@ -1,7 +1,6 @@
 'use client'
 
-import Image from "next/image";
-import { AboutContainer, AboutContent, AboutDescriptions, AboutText, AboutTitle } from "./about.styles";
+import { AboutContainer, AboutContent, AboutDescriptions, AboutImage, AboutText, AboutTitle } from "./about.styles";
 
 export default function About() {
   return (
@@ -17,7 +16,7 @@ export default function About() {
             <p>Seja você um candidato em busca do próximo desafio ou uma empresa em busca de novos talentos, o RntVagas promove a conexão entre pessoas e organizações, impulsionando o crescimento e a inovação em vários segmentos.</p>
           </AboutText>
         </AboutDescriptions>
-        <Image src="/about.png" alt="Logo" width={600} height={600} />
+        <AboutImage src="/about.png" alt="Logo" width={600} height={600} />
       </AboutContent>
     </AboutContainer>
   )

@@ -7,8 +7,9 @@ import styled from 'styled-components'
 export const ButtonContainer = styled.div``
 
 const BaseButton = `
+  display: flex;
   border-radius: 5px;
-  padding: 8px 16px;
+  padding: 8px 12px;
   cursor: pointer;
   text-decoration: none;
   background-color: ${theme.colors.secondaryColor};

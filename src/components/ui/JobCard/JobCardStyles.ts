@@ -1,14 +1,12 @@
 'use client'
 
-import { theme } from '@/styles/theme'
+import { media, theme, transitions } from '@/styles/theme'
 import styled from 'styled-components'
 import { StyledLink } from '../Button/ButtonStyles'
 
 export const JobCardContainer = styled.article`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
 
   h2 {
     font-size: 1.5rem;
@@ -17,19 +15,28 @@ export const JobCardContainer = styled.article`
   }
 
   p {
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: ${theme.colors.secondaryColor};
+    font-weight: bolder;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: left;
     margin-bottom: 16px;
+
+    ${media.sm} {
+      font-size: 0.875rem;
+
+      svg {
+        font-size: 2rem;
+      }
+    }
   }
 
-  .backButton {
+  .backButtonDiv {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 16px;
+    margin: 16px 0;
 
     ${StyledLink} {
       display: flex;
@@ -37,7 +44,7 @@ export const JobCardContainer = styled.article`
       font-size: 1rem;
       background-color: transparent;
       border: transparent;
-      transition: all 0.3s ease;
+      transition: ${transitions.default};
       padding: 0;
 
       svg {
@@ -45,7 +52,8 @@ export const JobCardContainer = styled.article`
       }
 
       &:hover {
-        transition: all 0.3s ease;
+        transition: ${transitions.default};
+
         color: ${theme.colors.forthColor};
       }
     }
@@ -53,7 +61,8 @@ export const JobCardContainer = styled.article`
 `
 
 export const JobCardContent = styled.div`
-  padding: 12px 24px;
+  padding: 12px;
+  margin-bottom: 24px;
   background-color: ${theme.colors.thirdColor};
   border-radius: 8px;
 `
@@ -66,7 +75,7 @@ export const JobCardHeader = styled.div`
   align-items: flex-start;
   gap: 4px;
   text-align: left;
-  border-bottom: 1px solid ${theme.colors.forthColor};
+  border-bottom: 1px solid ${theme.colors.secondaryColor};
   margin-bottom: 16px;
 
   button {
@@ -75,12 +84,20 @@ export const JobCardHeader = styled.div`
     right: 0;
     background-color: ${theme.colors.red};
     border: 1px solid ${theme.colors.red};
-    transition: all 0.3s ease;
+    transition: ${transitions.default};
 
     &:hover {
       background-color: ${theme.colors.redHover};
       border-color: ${theme.colors.redHover};
-      transition: all 0.3s ease;
+      transition: ${transitions.default};
+    }
+  }
+
+  ${media.sm} {
+    button {
+      position: absolute;
+      top: -50px;
+      right: -10px;
     }
   }
 `
@@ -96,8 +113,12 @@ export const JobCardTitle = styled.div`
 export const JobCardTitleDetails = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 50%;
   margin-bottom: 8px;
+
+  div:last-child {
+    display: flex;
+    margin-left: 25px;
+  }
 
   svg {
     margin-right: 8px;
@@ -120,7 +141,7 @@ export const JobCardBody = styled.div`
   align-items: flex-start;
   gap: 4px;
   text-align: left;
-  border-bottom: 1px solid ${theme.colors.forthColor};
+  border-bottom: 1px solid ${theme.colors.secondaryColor};
   margin-bottom: 16px;
 `
 

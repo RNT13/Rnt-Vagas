@@ -1,6 +1,6 @@
 'use client'
 
-import { theme } from '@/styles/theme'
+import { media, theme, transitions } from '@/styles/theme'
 import styled from 'styled-components'
 
 export const RegisterItemContainer = styled.div`
@@ -9,11 +9,16 @@ export const RegisterItemContainer = styled.div`
   justify-content: space-between;
   background-color: ${theme.colors.thirdColor};
   border-bottom: 5px solid ${theme.colors.primaryColor};
-  transition: all 0.3s ease;
+  transition: ${transitions.default};
 
   &:hover {
     border-bottom: 5px solid ${theme.colors.forthColor};
-    transition: all 0.3s ease;
+    transition: ${transitions.default};
+  }
+
+  ${media.sm} {
+    padding: 8px;
+    width: 100%;
   }
 `
 

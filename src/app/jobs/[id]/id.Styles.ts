@@ -1,9 +1,13 @@
 'use client'
 
+import { media } from '@/styles/theme'
 import styled from 'styled-components'
 
 export const IdContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 24px;
+
+  ${media.sm} {
+    padding: 0px;
+  }
 `

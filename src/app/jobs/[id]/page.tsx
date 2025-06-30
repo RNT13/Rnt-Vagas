@@ -2,7 +2,6 @@
 
 import NotFound from "@/app/not-found";
 import JobCard from "@/components/ui/JobCard/JobCard";
-import { TitleH2 } from "@/styles/globalStyles";
 import { IdContainer } from "./id.Styles";
 
 async function fetchJob(jobId: string) {
@@ -22,9 +21,7 @@ export default async function JobId({ params }: { params: { id: string } }) {
 
   return (
     <IdContainer className="container">
-      <TitleH2>
-        <JobCard job={job} />
-      </TitleH2>
+      <JobCard job={job} />
     </IdContainer>
   )
 }
