@@ -2,16 +2,21 @@
 
 import { RegisterItemContainer, RegisterItemContent } from "./RegisterItemStyles";
 
-export default function RegisterItem({ children, name, description }: { children: React.ReactNode, name: string, description: string }) {
+interface RegisterItemProps {
+  name: string
+  label: string
+  hint: string
+  children: React.ReactNode
+}
+
+export default function RegisterItem({ name, label, hint, children }: RegisterItemProps) {
   return (
     <RegisterItemContainer className="container">
       <RegisterItemContent>
-        <h2>{name}</h2>
-        <h3>
-          {description}
-        </h3>
+        <label htmlFor={name}>{label}</label>
+        <h3>{hint}</h3>
       </RegisterItemContent>
       {children}
     </RegisterItemContainer>
-  )
+  );
 }

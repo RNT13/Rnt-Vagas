@@ -28,6 +28,7 @@ export const theme = {
     black: '#000',
     red: '#FF0000',
     redHover: '#FF4837',
+    error: '#AB2E46',
     green: '#008000',
     green2: '#44BD32'
   }

@@ -23,8 +23,7 @@ export default async function JobId({ params }: { params: { id: string } }) {
   return (
     <IdContainer className="container">
       <TitleH2>
-        {JSON.stringify(job, null, 2)}
-        <JobCard />
+        <JobCard job={job} />
       </TitleH2>
     </IdContainer>
   )

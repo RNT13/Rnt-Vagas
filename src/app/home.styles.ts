@@ -5,11 +5,9 @@ import { theme } from '@/styles/theme'
 import styled from 'styled-components'
 
 export const HomeContainer = styled.main`
-  margin: 30px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 24px;
 `
 
 export const HomeContent = styled.div`

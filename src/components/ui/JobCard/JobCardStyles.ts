@@ -10,7 +10,23 @@ export const JobCardContainer = styled.article`
   width: 100%;
   height: 100%;
 
-  div:first-child {
+  h2 {
+    font-size: 1.5rem;
+    color: ${theme.colors.primaryColor};
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: ${theme.colors.secondaryColor};
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .backButton {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 16px;
@@ -46,6 +62,12 @@ export const JobCardHeader = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  text-align: left;
+  border-bottom: 1px solid ${theme.colors.forthColor};
+  margin-bottom: 16px;
 
   button {
     position: absolute;
@@ -63,24 +85,15 @@ export const JobCardHeader = styled.div`
   }
 `
 
-export const JobTitle = styled.div`
+export const JobCardTitle = styled.div`
   margin-bottom: 8px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   gap: 4px;
-
-  h2 {
-    font-size: 1.5rem;
-    color: ${theme.colors.primaryColor};
-  }
-  p {
-    font-size: 1rem;
-    color: ${theme.colors.secondaryColor};
-  }
 `
 
-export const JobTitleDetails = styled.div`
+export const JobCardTitleDetails = styled.div`
   display: flex;
   justify-content: space-between;
   width: 50%;
@@ -88,6 +101,7 @@ export const JobTitleDetails = styled.div`
 
   svg {
     margin-right: 8px;
+    color: ${theme.colors.primaryColor};
   }
 
   div {
@@ -96,14 +110,25 @@ export const JobTitleDetails = styled.div`
     justify-content: center;
     align-items: start;
     gap: 4px;
-
-    p {
-      font-size: 0.875rem;
-      color: ${theme.colors.secondaryColor};
-    }
   }
 `
 
-export const JobCardBody = styled.div``
+export const JobCardBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  text-align: left;
+  border-bottom: 1px solid ${theme.colors.forthColor};
+  margin-bottom: 16px;
+`
 
-export const JobCardFooter = styled.div``
+export const JobCardFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  text-align: left;
+`

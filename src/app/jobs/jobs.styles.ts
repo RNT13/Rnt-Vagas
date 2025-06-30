@@ -6,10 +6,7 @@ import styled from 'styled-components'
 export const JobsContainer = styled.main`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 30px 0;
+  padding: 24px;
 `
 
 export const JobsContent = styled.main``

@@ -4,11 +4,9 @@ import { theme } from '@/styles/theme'
 import styled from 'styled-components'
 
 export const AboutContainer = styled.main`
-  margin: 20px 0px 50px 0px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 24px;
 `
 
 export const AboutContent = styled.div`

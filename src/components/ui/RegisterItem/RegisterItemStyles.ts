@@ -9,9 +9,11 @@ export const RegisterItemContainer = styled.div`
   justify-content: space-between;
   background-color: ${theme.colors.thirdColor};
   border-bottom: 5px solid ${theme.colors.primaryColor};
+  transition: all 0.3s ease;
 
   &:hover {
     border-bottom: 5px solid ${theme.colors.forthColor};
+    transition: all 0.3s ease;
   }
 `
 
