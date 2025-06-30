@@ -1,5 +1,3 @@
-'use server'
-
 import NotFound from "@/app/not-found";
 import JobCard from "@/components/ui/JobCard/JobCard";
 import { IdContainer } from "./id.Styles";
@@ -16,7 +14,7 @@ export default async function JobId({ params }: { params: { id: string } }) {
   const job = await fetchJob(jobId)
 
   if (!job) {
-    NotFound()
+    return <NotFound />
   }
 
   return (
