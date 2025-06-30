@@ -12,7 +12,7 @@ async function fetchJob(jobId: string) {
 }
 
 export default async function JobId({ params }: { params: { id: string } }) {
-  const jobId = (await params).id
+  const jobId = params.id
   const job = await fetchJob(jobId)
 
   if (!job) {
