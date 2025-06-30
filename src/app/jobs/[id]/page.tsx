@@ -1,21 +1,43 @@
-import NotFound from "@/app/not-found";
-import JobCard from "@/components/ui/JobCard/JobCard";
-import { IdContainer } from "./id.Styles";
+import JobCard from '@/components/ui/JobCard/JobCard'
+import { Job } from '@/types/types'
+import type { Metadata, ResolvingMetadata } from 'next'
+import { notFound } from 'next/navigation'
+import { IdContainer } from './id.Styles'
 
-async function fetchJob(jobId: string) {
-  const res = await fetch(`http://apis.codante.io/api/job-board/jobs/${jobId}`)
-  if (!res.ok) return undefined
+async function fetchJob(id: string): Promise<Job | null> {
+  const res = await fetch(`https://apis.codante.io/api/job-board/jobs/${id}`)
+  if (!res.ok) return null
   const data = await res.json()
   return data.data
 }
 
-export default async function JobId({ params }: { params: { id: string } }) {
-  const jobId = params.id
-  const job = await fetchJob(jobId)
+type Props = {
+  params: Promise<{ id: string }>
+}
 
-  if (!job) {
-    return <NotFound />
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { id } = await params
+  const job = await fetchJob(id)
+
+  const previousImages = (await parent).openGraph?.images || []
+
+  return {
+    title: job?.title ?? 'Vaga não encontrada',
+    description: job?.description,
+    openGraph: {
+      images: ['/default-image.png', ...previousImages],
+    },
   }
+}
+
+export default async function Page({ params }: Props) {
+  const { id } = await params
+  const job = await fetchJob(id)
+
+  if (!job) return notFound()
 
   return (
     <IdContainer className="container">

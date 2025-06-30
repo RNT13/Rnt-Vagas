@@ -29,7 +29,6 @@ export default async function Jobs() {
             <JobItem key={job.id} job={job} />
           ))}
         </div>
-
       </JobsContent>
     </JobsContainer>
   )
