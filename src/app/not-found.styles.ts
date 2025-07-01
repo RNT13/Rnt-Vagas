@@ -21,6 +21,11 @@ export const NotFoundContent = styled.div`
   justify-content: center;
   text-align: center;
   padding: 30px 0;
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
 `
 
 export const NotFoundImage = styled(Image)`

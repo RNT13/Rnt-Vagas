@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/Button/Button";
-import { GlobalP, TitleH2 } from "@/styles/globalStyles";
+import { TitleH2 } from "@/styles/globalStyles";
 import { NotFoundContainer, NotFoundContent, NotFoundImage } from "./not-found.styles";
 
 export default function NotFound() {
@@ -9,7 +9,7 @@ export default function NotFound() {
       <NotFoundContent >
         <TitleH2>Nada encontrado aqui...</TitleH2>
         <NotFoundImage src="/404.png" alt="ilustração de pessoa com um megafone" width={600} height={600} />
-        <GlobalP>Desculpe, a página que você está procurando não foi encontrada.</GlobalP>
+        <p>Desculpe, a página que você está procurando não foi encontrada.</p>
         <Button title="Voltar para a página inicial" href="/" type="button" />
       </NotFoundContent >
     </NotFoundContainer >

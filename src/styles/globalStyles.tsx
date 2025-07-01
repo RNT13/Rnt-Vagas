@@ -33,8 +33,3 @@ export const TitleH2 = styled.h2`
   font-weight: 600;
   margin-bottom: 12px;
 `
-
-export const GlobalP = styled.p`
-  font-size: 1rem;
-  margin-bottom: 12px;
-`

@@ -88,17 +88,12 @@ export const JobItemDescription = styled.div`
   }
 
   ${media.sm} {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
 
     h2 {
       border: none;
-      justify-content: start;
-      width: 100%;
-      font-size: 0.95rem;
     }
   }
 `
