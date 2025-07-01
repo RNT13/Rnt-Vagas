@@ -14,6 +14,13 @@ export const JobsContainer = styled.main`
 `
 
 export const JobsContent = styled.main`
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
   ${media.sm} {
     margin-top: 24px;
   }

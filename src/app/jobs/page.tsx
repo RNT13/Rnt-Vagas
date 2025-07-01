@@ -1,5 +1,4 @@
 import JobItem from "@/components/ui/JobItem/JobItem";
-import { TitleH2 } from "@/styles/globalStyles";
 import { Job } from "@/types/types";
 import { JobsContainer, JobsContent } from "./jobs.styles";
 
@@ -23,7 +22,7 @@ export default async function Jobs() {
   return (
     <JobsContainer className="container">
       <JobsContent >
-        <TitleH2>Todas as vagas</TitleH2>
+        <h2>Todas as vagas</h2>
         <div>
           {jobs.map(job => (
             <JobItem key={job.id} job={job} />

@@ -1,6 +1,6 @@
 'use client'
 
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { media, theme } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
@@ -25,11 +25,3 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 `;
-
-
-export const TitleH2 = styled.h2`
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-`

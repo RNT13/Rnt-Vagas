@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/Button/Button";
 import RegisterItem from "@/components/ui/RegisterItem/RegisterItem";
 import { createJob } from "@/lib/actions";
-import { TitleH2 } from "@/styles/globalStyles";
 import { useActionState } from "react";
 import { BiSolidErrorCircle } from "react-icons/bi";
 import { ButtonDiv, Error, FormInput, FormSelect, FormTextArea, JobsRegisterContainer, JobsRegisterContent, JobsRegisterForm } from "./register.style";
@@ -15,7 +14,7 @@ export default function JobForm() {
     <JobsRegisterContainer className="container">
       <form action={CreateJobAction}>
         <JobsRegisterContent>
-          <TitleH2>Cadastrar nova vaga</TitleH2>
+          <h2>Cadastrar nova vaga</h2>
           <JobsRegisterForm >
             {state?.message && (
               <Error>

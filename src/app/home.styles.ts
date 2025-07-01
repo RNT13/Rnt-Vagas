@@ -22,6 +22,13 @@ export const HomeContent = styled.div`
   justify-content: center;
   gap: 2rem;
 
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
   ${media.sm} {
     width: 90%;
   }

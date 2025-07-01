@@ -14,6 +14,13 @@ export const JobsRegisterContainer = styled.main`
 `
 
 export const JobsRegisterContent = styled.div`
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
   padding: 30px 0;
   display: flex;
   flex-direction: column;

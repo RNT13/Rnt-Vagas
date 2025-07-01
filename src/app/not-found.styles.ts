@@ -26,6 +26,13 @@ export const NotFoundContent = styled.div`
     font-size: 1rem;
     margin-bottom: 12px;
   }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
 `
 
 export const NotFoundImage = styled(Image)`
