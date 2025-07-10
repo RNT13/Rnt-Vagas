@@ -14,6 +14,9 @@ const font = Roboto({
 export const metadata: Metadata = {
   title: 'RNT Vagas',
   description: 'RNT Vagas conecta candidatos a empresas ideais, oferecendo funcionalidades intuitivas para busca e gerenciamento de vagas.',
+  icons: {
+    icon: '/favicon.ico',
+  }
 }
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
