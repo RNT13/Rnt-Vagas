@@ -13,7 +13,7 @@ Uma plataforma moderna e responsiva para divulgação e busca de vagas, constru�
 
 ## 🌐 Acesse a página ao vivo
 
-[Deploy do Rnt Vagas](#) <!-- Substitua pelo link real quando disponível -->
+[Deploy do Rnt Vagas](https://rnt-vagas.vercel.app/)
 
 ---
 
@@ -51,5 +51,5 @@ Uma plataforma moderna e responsiva para divulgação e busca de vagas, constru�
 
 ## 👤 Autor
 
-Feito com 💙 por Renato Minoita
+Feito com 💙 por [Renato Minoita](https://www.linkedin.com/in/renato-minoita/)
 Confira mais em [GitHub](https://github.com/renatominoita)
